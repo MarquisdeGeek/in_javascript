@@ -1,0 +1,26 @@
+.chart {
+    width: 100%;
+    display: block;
+    padding: 0 0 2rem;
+  }
+  
+  .chart div {
+    height: 3rem;
+    float: left;
+    border:1px dashed black;
+    transition-property: width;
+    transition-duration: 0.5s;
+    margin: 0px;
+
+    display: flex;
+    align-items: center;     
+  }
+  
+  .chart .start {
+    border-radius: 2rem 0 0 2rem;
+  }
+  
+  .chart .end {
+    border-radius: 0 2rem 2rem 0;
+  }
+  

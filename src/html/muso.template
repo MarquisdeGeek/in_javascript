@@ -1,0 +1,87 @@
+
+  <div class=" ticket-wrap">
+      <div class="ticket" aria-hidden="true">
+        <div class="ticket__header">
+          <div class="ticket__co">
+            <span data-musician="${}" class="ui_status_name ui_action_ping ticket__co-name"></span>
+            <span data-musician="${}" class="ui_status_progress u-upper ticket__co-subname"></span>
+            <svg data-musician="${}" class="ui_action_next ticket__co-icon" width="48" height="48" fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="175px" height="175px" viewBox="-22.08 -22.08 265.01 265.01" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-22.08" y="-22.08" width="265.01" height="265.01" rx="132.505" fill="#7ed0ec" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M199.948,188.028c11.536,0,20.898-13.811,20.898-30.842V63.66c0-17.026-9.367-30.841-20.898-30.841 c-11.548,0-20.899,13.815-20.899,30.841v25.8l-75.96-43.559C88.634,37.604,76.89,44.1,76.39,60.351l48.558,27.848 c9.579,5.489,15.079,13.595,15.079,22.232c0,8.645-5.5,16.744-15.079,22.243L76.39,160.511c0.5,16.239,12.244,22.743,26.699,14.447 l75.96-43.548v25.776C179.044,174.223,188.4,188.028,199.948,188.028z"></path> <path d="M112.525,95.091L26.75,45.901C11.982,37.427,0,44.369,0,61.404v98.062c0,17.025,11.982,23.969,26.75,15.492l85.781-49.177 C127.294,117.305,127.294,103.565,112.525,95.091z"></path> </g> </g></svg>
+          </div>
+        </div>
+        <div class="ticket__body">
+          <img data-musician="${}" class="ui_status_score" src="scores/01.png">
+          <br>
+          <img data-musician="${}" class="ui_status_score_next" src="scores/02.png">
+          <p  data-musician="${}" class="ui_status_telaps ticket__route">-</p>
+
+          <p class="ticket__description">Control</p>
+
+          <div class="two_panel">
+            <span data-musician="${}" class="controlButton ui_action_next">Next</span>
+            <span data-musician="${}" class="controlButton ui_action_pause">Pause</span>
+            <span data-musician="${}" class="controlButton ui_action_ping">Ping</span>
+          </div>
+
+
+          <br>
+          <div data-musician="${}" class="volume">
+            <input data-musician="${}" type="range" min="0" max="100" value="50" class="volume-range">
+
+            <div data-musician="${}" class="bar-hoverbox">
+              <div data-musician="${}" class="bar">
+                <div data-musician="${}" class="bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <div class="five_panel">
+            <span data-musician="${}" data-octave="-24" class="numberCircle ui_action_octave">-24</span>
+            <span data-musician="${}" data-octave="-12" class="numberCircle ui_action_octave">-12</span>
+            <span data-musician="${}" data-octave="0"   class="numberCircle ui_action_octave"> 0</span>
+            <span data-musician="${}" data-octave="12"  class="numberCircle ui_action_octave">12</span>
+            <span data-musician="${}" data-octave="24"  class="numberCircle ui_action_octave">24</span>
+          </div>
+
+
+          <br> <br>
+          <p class="ticket__description">Status</p>
+          <div class="ticket__timing">
+              <p>
+                <span class="u-upper ticket__small-label">Behind</span>
+                <span data-musician="${}" class="ui_status_behind ticket__detail"></span>
+              </p>
+              <p>
+                <span class="u-upper ticket__small-label">Here</span>
+                <span data-musician="${}" class="ui_status_equal ticket__detail">10:30 am</span>
+              </p>
+              <p>
+                <span class="u-upper ticket__small-label">Ahead</span>
+                <span data-musician="${}" class="ui_status_ahead ticket__detail"></span>
+              </p>
+            </div>
+            <p class="u-upper ticket__admit"></p>
+
+            <div class="ticket__timing">
+              <p>
+                <span class="u-upper ticket__small-label">Last</span>
+                <span data-musician="${}" class="ui_status_last ticket__detail"></span>
+              </p>
+              <p>
+                <span class="u-upper ticket__small-label">Number&nbsp;of</span>
+                <span data-musician="${}" class="ticket__detail">Phrases away</span>
+              </p>
+              <p>
+                <span class="u-upper ticket__small-label">Leader</span>
+                <span data-musician="${}" class="ui_status_first ticket__detail"></span>
+              </p>
+            </div>
+  
+
+          <p class="ticket__fine-print">(try and keep these under 4)</p>
+          
+        </div>
+      </div>
+    </div>
+
+

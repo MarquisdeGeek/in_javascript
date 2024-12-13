@@ -1,0 +1,19 @@
+.controlButton {
+    border-radius: 10%;
+    width: 80px;
+    height: 26px;
+    padding: 8px;
+    margin: 4px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    float:right;
+    font: 22px Arial, sans-serif;
+}
+
+.ui_status_score_next {
+    opacity: 30%;
+}

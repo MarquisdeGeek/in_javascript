@@ -1,0 +1,6 @@
+.volume {
+    input[type=range] {
+      display: flex;
+      width: 100%;
+    }
+}
