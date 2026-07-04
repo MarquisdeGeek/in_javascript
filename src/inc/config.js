@@ -1,4 +1,4 @@
 
 module.exports = {
-    scoreID: "kyoto"
+    scoreID: undefined
 };
