@@ -160,5 +160,5 @@ function onVolumeChange(e) {
     const musicianIndex = $(e.target).data().musician;
     const volume = parseInt(e.target.value);
 
-    webSocket.send(JSON.stringify({msg: "p_in_volume", musicianIndex: musicianIndex, volume: volume}));
+    wswSend(JSON.stringify({msg: "p_in_volume", musicianIndex: musicianIndex, volume: volume}));
 }

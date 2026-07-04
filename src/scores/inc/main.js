@@ -1,3 +1,4 @@
+const config = require('./config');
 const midi_info = require('midi-info');
 
 
@@ -401,6 +402,8 @@ const patternData = [
   // console.log(getPattern(i))
 
 module.exports = {
+    config,
+    //
     getPatternCount,
     getPattern,
     getState

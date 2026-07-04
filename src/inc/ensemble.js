@@ -36,8 +36,7 @@ function Ensemble(cfg) {
 
             if (isPlayingPulse) {
                 if (pulse === 0) {
-                    const qnDuration = midi_info.Constants.Pulses.DURATION_QUAVER;
-                    sequencer.qNote(0, cfg.pulse.channel, cfg.pulse.pitch, cfg.pulse.volume, qnDuration);
+                    pingPulse();
                 }
                 //
                 musicianList.forEach((m) => {
@@ -149,11 +148,16 @@ function Ensemble(cfg) {
         return state;
     }
 
+    function pingPulse() {
+        const qnDuration = midi_info.Constants.Pulses.DURATION_QUAVER;
+        const thePulse = currentScore.config.pulse;
+
+        sequencer.qNote(0, thePulse.channel, thePulse.pitch, thePulse.volume, qnDuration);
+    }
 
     function pingMusicians(musicianIndex) {
         if (typeof musicianIndex === typeof undefined) {
-            const qnDuration = midi_info.Constants.Pulses.DURATION_QUAVER;
-            sequencer.qNote(0, cfg.pulse.channel, cfg.pulse.pitch, cfg.pulse.volume, qnDuration);
+            pingPulse();
 
             musicianList.forEach((m) => {
                 m.musician.ping(sequencer);

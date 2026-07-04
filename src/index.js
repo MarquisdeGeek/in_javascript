@@ -38,8 +38,8 @@ const ensemble = new Ensemble({
         }
     },
     archive: archive,
-    pulse: Config.pulse,
-    musicianList: Config.musicianList,
+    pulse: score.config.pulse,
+    musicianList: score.config.musicianList,
     onRefill: () => {
         // Send a new state only when the buffer has been filled with the next phrase
         ss.sendState();
@@ -52,6 +52,6 @@ const performance = new InJs(score, ensemble, archive);
 const WebServer = require("./web_server.js", scoreID);
 const SocketServer = require("./sockets_server.js");
 
-const web = new WebServer(process.env.PORT_WEBSERVER, process.env.PORT_SOCKETS, scoreID, Config.musicianList);
+const web = new WebServer(process.env.PORT_WEBSERVER, process.env.PORT_SOCKETS, scoreID, score.config.musicianList);
 const ss = new SocketServer(process.env.PORT_SOCKETS, performance, archive);
 

@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const express = require('express')
+const ip = require("ip");
 
 
 function WebServer(port, portSockets, scoreID, musicianList) {
@@ -20,6 +21,12 @@ function WebServer(port, portSockets, scoreID, musicianList) {
         data += fs.readFileSync('html/post.html', 'utf8');
 
         res.send(data);
+      });
+      app.get('/ip', function(req, res) {
+        res.send({
+          ip: ip.address(),
+          port: process.env.PORT_SOCKETS
+        });
       });
       app.use(express.static('public_html'))
       app.use('/scores', express.static(scorePath));

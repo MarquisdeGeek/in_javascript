@@ -67,8 +67,10 @@ function Musician(idx, musicianConfig) {
             return;
         }
 
-        let songBeats = ((bar * 3) + beat);
-        let pulseAt = songBeats * 384 + qnp;
+
+        const beatsPerBar = currentScore.getState().beatsPerBar;
+        const songBeats = ((bar * beatsPerBar) + beat);
+        const pulseAt = songBeats * 384 + qnp;
         if (typeof refillAtPQN === typeof undefined) {
             if (beat) {
                 return;
